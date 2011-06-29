@@ -10,19 +10,21 @@ snippet tab
 	${3}
 	\end{$1}
 # Align(ed)
-snippet ali
-	\begin{align${1:ed}}
+snippet align
+	\begin{align}
+		\label{eq:${1}}
 		${2}
-	\end{align$1}
+	\end{align}
 # Gather(ed)
-snippet gat
+snippet gather
 	\begin{gather${1:ed}}
 		${2}
 	\end{gather$1}
 # Equation
 snippet eq
 	\begin{equation}
-		${1}
+		\label{eq:${1}}
+		${2}
 	\end{equation}
 # Unnumbered Equation
 snippet \
