@@ -104,3 +104,7 @@ snippet ipdb
 # ipython debugger (pdbbb)
 snippet pdbbb
 	import pdbpp; pdbpp.set_trace()
+snippet testmod
+	if __name__ == "__main__":
+		import doctest
+		doctest.testmod(verbose=True)
