@@ -7,49 +7,5 @@ snippet head
 		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
 		${2}
 	</head>
-# Embed QT Movie
-snippet movie
-	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
-	 codebase="http://www.apple.com/qtactivex/qtplugin.cab">
-		<param name="src" value="$1"`Close()`>
-		<param name="controller" value="$4"`Close()`>
-		<param name="autoplay" value="$5"`Close()`>
-		<embed src="${1:movie.mov}"
-			width="${2:320}" height="${3:240}"
-			controller="${4:true}" autoplay="${5:true}"
-			scale="tofit" cache="true"
-			pluginspage="http://www.apple.com/quicktime/download/"
-		`Close()[1:]`>
-	</object>${6}
 snippet meta
 	<meta name="${1:name}" content="${2:content}"`Close()`>${3}
-snippet ##
-	#{${1:tagName} ${2:param}} ${3} #{/${1}}
-snippet dobody
-	#{doBody /}${1}
-snippet dolayout
-	#{doLayout /}${1}
-snippet elseif
-	#{elseif ${1:condition}} ${2} #{/elseif}
-snippet else
-	#{else} ${1} #{/else}
-snippet extends
-	#{extends '${1:class}' /} ${2}
-snippet get
-	#{get '${1:param}' /} ${2}
-snippet if
-	#{if ${1:condition}} ${2} #{/if}
-snippet include
-	#{include ${1:page} /} ${2}
-snippet list
-	#{list items:${1:list}, as:'${2:item}'} ${3} #{/list}
-snippet set
-	#{set ${1:var}: '${2:value}' /}
-snippet $
-	\$\{${1:expression}}${2}
-snippet %
-	%{${1:script}}%${2}
-snippet *
-	*{ ${1:comment} }*${2}
-snippet @
-	@{${1:action}}${2}
