@@ -200,3 +200,12 @@ snippet sum
 #cite
 snippet cite
 	\cite{${1}}
+
+snippet lst
+	\lstinputlisting{${1}}${2}
+snippet lstfile
+	\lstinputlisting[language=file,frame=single]{${1}}${2}
+snippet lstcase
+	\lstinputlisting[language=testcase,frame=single]{${1}}${2}
+snippet lstrange
+	\lstinputlisting[linerange=${1}]{${2}}${3}
